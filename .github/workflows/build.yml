@@ -20,10 +20,10 @@ jobs:
           config: vendor/xiaomi/miatoll_defconfig
           arch: arm64
           aosp-gcc: true
-          aosp-clang: true
+          aosp-clang: false
+          other-clang-url	: https://github.com/kdrag0n/proton-clang
           ksu: true
-          ksu-version: 0.9.5
+          ksu-version: v0.9.5
           android-version: 14
-          aosp-clang-version: r383902
           disable-lto: true
           anykernel3: true
