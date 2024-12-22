@@ -1,4 +1,4 @@
-name: Build Kernel
+name: Test
 on:
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: false
-          other-clang-url	: https://github.com/kdrag0n/proton-clang
+          other-clang-url	: https://github.com/kdrag0n/proton-clang.git
           ksu: true
           ksu-version: v0.9.5
           android-version: 14
