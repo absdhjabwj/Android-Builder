@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "miatoll",
       "repo": "https://github.com/LineageOS/android_kernel_xiaomi_sm6250",
-      "branch": "lineage-21",
+      "branch": "lineage-22.1",
       "device": "miatoll",
       "defconfig": "vendor/xiaomi/miatoll_defconfig"
     },
