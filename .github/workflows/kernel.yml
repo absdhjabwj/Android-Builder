@@ -56,6 +56,7 @@ jobs:
 
       - name: ⭐ Install prerequisites
         run: |
+          cat /etc/os-release
           sudo apt-get update
           sudo apt-get install -y cpio curl git ftp lftp wget libarchive-tools ccache python2 python2-dev python3
           sudo apt-get install -y pngcrush schedtool dpkg-dev liblz4-tool make optipng maven device-tree-compiler 
@@ -68,7 +69,6 @@ jobs:
           tar xvf utils.tar.gz
           sudo cp src/mkdtboimg.py /usr/bin/mkdtimg
           sudo chmod a+x /usr/bin/mkdtimg          
-          
       - name: Cleanup
         uses: easimon/maximize-build-space@master
         with:
@@ -378,8 +378,3 @@ jobs:
           tag_name: v${{ env.BUILD_DATE }}.${{ github.run_number }}
           files: "${{ env.ANYKERNEL3_FILE }}.zip"
           generate_release_notes: true
-
-      - name: "Show system information"
-        run: |
-          echo "Running on Debian 9 system:"
-          cat /etc/os-release
