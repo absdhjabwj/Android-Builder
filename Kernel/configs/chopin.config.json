@@ -1,0 +1,47 @@
+[
+  {
+    "kernelSource": {
+      "name": "chopin",
+      "repo": "https://github.com/xYc4t/kernel_xiaomi_chopin",
+      "branch": "r",
+      "device": "chopin",
+      "defconfig": "chopin_user_defconfig"
+    },
+    "toolchains": [
+      {
+        "name": "proton-clang",
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "binaryEnv": ["./bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "clang",
+      "externalCommands": {
+        "CLANG_TRIPLE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE": "aarch64-linux-android-",
+        "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
+        "LD": "ld.lld",
+        "AR": "llvm-ar",
+        "NM": "llvm-nm",
+        "OBJCOPY": "llvm-objcopy",
+        "OBJDUMP": "llvm-objdump",
+        "READELF": "llvm-readelf",
+        "OBJSIZE": "llvm-size",
+        "STRIP": "llvm-strip",
+        "LDGOLD": "aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "llvm-ar",
+        "LLVM_DIS": "llvm-dis",
+        "CONFIG_THINLTO": "y"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    },
+    "enableKernelSU": true,
+    "enableLXC": true
+  }
+]
